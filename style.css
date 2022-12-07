@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.wrapper{
+    min-height: 100vh;
+    display: grid;
+    gap: 8px;
+
+    grid-template-areas: 
+    "header header header"
+    "title title title"
+    "banner banner bb1"
+    "banner banner bb2"
+    "side-menu main main"
+    "tags main main"
+    "recently main main"
+    "footer footer footer";
+
+
+}
+
+.wrapper > * {
+    display: grid;
+    justify-content:center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header{
+    background-color: rgb(120, 174, 221);
+    grid-area: header;
+}
+
+.title{
+    background-color: aqua;
+    grid-area: title;
+}
+
+.banner{
+    background: radial-gradient(red,blue, green);
+    grid-area: banner;
+    min-height: 20vh;
+}
+
+.bb1{
+    background-color: orange;
+    grid-area: bb1;
+}
+
+.bb2{
+    background-color: greenyellow;
+    grid-area: bb2;
+}
+
+
+.side-menu{
+    background-color: blue;
+    grid-area: side-menu;
+
+}
+
+.tags{
+    background-color: blueviolet;
+    grid-area: tags;
+}
+
+.recently{
+    background-color: blanchedalmond;
+    grid-area: recently;
+}
+
+.main{
+    background:linear-gradient(to right,blue 70%, orange);
+    grid-area: main;
+    min-height: 20vh;
+}
+
+.footer{
+    grid-area: footer;
+background: black;
+color: whitesmoke;
+
+}
+
+/* media queries */
+@media (max-width:768px){
+    
+   .wrapper{
+    grid-template-areas: 
+    "header header "
+    "title title "
+    "banner banner"
+    "bb1 bb2"
+    "side-menu side-menu"
+    "main main"
+    "tags recently "
+    "footer footer";
+
+    }
+}
+
+@media (max-width:600px){
+
+    .wrapper{
+        gap: 10px;
+        grid-template-areas: 
+        "header "
+        "title  "
+        "banner "
+        "bb1"
+        "bb2"
+        "side-menu"
+        "main "
+        "tags "
+        " recently "
+        "footer";
+    
+        }
+
+}
